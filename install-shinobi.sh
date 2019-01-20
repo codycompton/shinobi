@@ -12,7 +12,7 @@ git clone "https://gitlab.com/Shinobi-Systems/ShinobiCE"
 cd ./ShinobiCE
 echo "Adding Shinobi user to database..."
 mysql -h localhost -u root -e "source sql/user.sql"
-ehco "Shinobi database framework setup..."
+echo "Shinobi database framework setup..."
 mysql -h localhost -u root -e "source sql/framework.sql"
 echo "Securing mysql..."
 #/usr/local/bin/mysql_secure_installation
