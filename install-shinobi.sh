@@ -7,6 +7,8 @@ pkg install -y nano ffmpeg libav x264 x265 mysql56-server node npm
 echo "Enabling mysql..."
 sysrc mysql_enable=yes
 service mysql-server start
+#Create symlink to fix missing libdl.so.1 dependency, needed later for npm commands.
+ln -sf /lib/libc.so.7 /usr/lib/libdl.so.1
 echo "Cloning the official Shinobi Community Edition gitlab repo..."
 git clone "https://gitlab.com/Shinobi-Systems/ShinobiCE"
 cd ./ShinobiCE
